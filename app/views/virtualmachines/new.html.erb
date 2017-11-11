@@ -1,0 +1,32 @@
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+      <%= form_tag({controller: :virtualmachines, action: :show}) do %>
+
+      <table>
+      <tr>
+      	<th><%= label_tag :uuid %></th>
+      	<td><%= text_field :uuid, class: 'form-control' %></td>
+      </tr>
+      <tr>
+      	<th><%= label_tag :typename %></th>
+      	<td><%= text_field :typename, class: 'form-control' %></td>
+  	  </tr>
+      <tr>
+      	<th><%= label_tag :cpu %></th>
+      	<td><%= text_field :cpu, class: 'form-control' %></td>
+	  </tr>
+      <tr>
+      	<th><%= label_tag :memory %></th>
+      	<td><%= text_field :memory, class: 'form-control' %></td>
+      </tr>
+      
+      <tr>
+      	<th><%= label_tag :publickey %></th>
+      	<td><%= text_field :publickey, class: 'form-control' %></td>
+      </tr>
+  		</table>
+
+      <%= submit_tag "Create new Virtual Machine!", class: "btn btn-primary" %>
+    <% end %>
+</div>
+</div>
