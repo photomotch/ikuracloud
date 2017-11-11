@@ -4,6 +4,6 @@ User.create!(name:  "Michael Jackson",
              password_confirmation: "foobar")
 
 user = User.find(1)
-user.machines.create!(type: "Created", cpu: "intel", memory: "256")
-user.machines.create!(type: "Created", cpu: "amd", memory: "128")
+user.machines.create!(typename: "create", cpu: "intel", memory: "256")
+user.machines.create!(typename: "create", cpu: "amd", memory: "128")
 
