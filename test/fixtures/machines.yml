@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  cpu: MyString
+  memory: MyString
+  publickey: MyString
+  user: one
+
+two:
+  type: 
+  cpu: MyString
+  memory: MyString
+  publickey: MyString
+  user: two
