@@ -1,0 +1,10 @@
+<li id="machine-<%= machine.id %>">
+  <span class="user"><%= link_to machine.user.name, machine.user %></span>
+  <span class="content"><%= machine.typename %></span>
+  <span class="content"><%= machine.cpu %></span>
+  <span class="content"><%= machine.memory %></span>
+  <span class="content"><%= machine.publickey %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(machine.created_at) %> ago.
+  </span>
+</li>
