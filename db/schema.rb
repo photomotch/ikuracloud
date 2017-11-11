@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110075520) do
+ActiveRecord::Schema.define(version: 20171111063633) do
+
+  create_table "machines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "type"
+    t.string "cpu"
+    t.string "memory"
+    t.string "publickey"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_machines_on_user_id"
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -21,4 +32,5 @@ ActiveRecord::Schema.define(version: 20171110075520) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "machines", "users"
 end
